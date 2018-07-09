@@ -40,7 +40,7 @@ export default {
   background: #fff !important
 .wrapper
   width: 100%
-  height: 31.25vw
+  height: 26.6vw
   .swiper-img
    width: 100%
 </style>
