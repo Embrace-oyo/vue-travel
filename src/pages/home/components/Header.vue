@@ -4,7 +4,9 @@
         <div class="iconfont back-icon">&#xe624;</div>
       </div>
       <div class="header-input"><span class="iconfont">&#xe632;</span>输入城市/景点/游玩主题</div>
-      <div class="header-right">{{this.city}}<span class="iconfont arrow-icon">&#xe64a;</span></div>
+      <router-link to="/city">
+        <div class="header-right">{{this.city}}<span class="iconfont arrow-icon">&#xe64a;</span></div>
+      </router-link>
     </div>
 </template>
 
@@ -22,9 +24,9 @@ export default {
   .header
     background: $bgColor
     display: flex
-    height: 0.86rem
+    height: $headerHeight
     color: #fff
-    line-height: 0.86rem
+    line-height: $headerHeight
     .header-left
       width: .64rem
       float: left
@@ -44,6 +46,7 @@ export default {
       width: 1.24rem
       float: right
       text-align: center
+      color:#fff
       .arrow-icon
         margin-left: .1rem
         font-size: .24rem
