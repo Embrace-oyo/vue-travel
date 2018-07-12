@@ -33,7 +33,6 @@ export default {
   name: 'List',
   props: ['city', 'letter'],
   mounted () {
-    console.log(this.city.cities)
     this.scroll = new BScroll(this.$refs.wrapper)
   },
   watch: {

@@ -1,7 +1,7 @@
 <template>
   <div class="city">
     <city-header></city-header>
-    <Search></Search>
+    <Search :cities="cities"></Search>
     <List :city="city" :letter="letter"></List>
     <Alphabet :city="city" @change="handleLetterChange"></Alphabet>
   </div>
@@ -17,8 +17,9 @@ export default {
   name: 'City',
   data () {
     return {
-      city: '',
-      letter: ''
+      city: [],
+      letter: '',
+      cities: []
     }
   },
   components: {
@@ -37,6 +38,7 @@ export default {
     getCityInfoSucc (res) {
       if (res.data.data !== undefined && res.status === 200) {
         this.city = res.data.data
+        this.cities = res.data.data.cities
       }
     },
     handleLetterChange (letter) {
